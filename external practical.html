@@ -1,17 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<header>
-<tittle> registration form </tittle>
-</header>
+<head>
+    <title>Full Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .gender {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
 <body>
-<h1> registration form </h1>
-<form>
-Name:
-<input type ="NAME"> </input><br><br>
-father name:
-<input type ="father name"></input><br><br>
-email:
-<input type = "email"> </input><br><br>
-pssward:
-<input type="passward"> </input><br><br>
-<button type="submit">submit</button>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <label>First Name</label>
+        <input type="text" name="firstname" required>
+
+        <label>Last Name</label>
+        <input type="text" name="lastname" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="Male" class="gender"> Male
+        <input type="radio" name="gender" value="Female" class="gender"> Female
+        <input type="radio" name="gender" value="Other" class="gender"> Other
+        <br><br>
+
+        <label>Course</label>
+        <select name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="BCA">BCA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="MCA">MCA</option>
+        </select>
+
+        <label>Address</label>
+        <textarea name="address" rows="3" required></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
